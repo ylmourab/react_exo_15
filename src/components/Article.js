@@ -1,10 +1,11 @@
-import React from 'react'
+import React,{useState} from 'react'
 
 function Article(props) {
+    const [title,setTitle] = useState(props.titre)
     return (
         <div>
             <h1>
-            {props.titre.map(e =>{
+            {title.map(e =>{
                 return `${e.titre}  `
             })}
             </h1>
